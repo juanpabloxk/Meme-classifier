@@ -68,3 +68,9 @@ coverage/
 # =========================
 *.local
 *.tsbuildinfo
+
+# =========================
+# Override global gitignore
+# =========================
+# ~/.gitignore_global ignores "media", but we need it for README assets
+!media/
