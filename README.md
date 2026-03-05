@@ -12,19 +12,7 @@
 
 Stop drowning in folders full of `IMG_20221227_233602.jpg`. Point Meme Classifier at a directory and let AI vision models analyze each image, suggest a descriptive filename, and rename it for you — all in a beautiful, dark-mode desktop interface.
 
----
-
-<!-- ============================================================ -->
-<!-- TODO: Replace the line below with an animated GIF or video    -->
-<!-- showing the full workflow (select folder → classify → rename) -->
-<!-- Example: ![Demo](./assets/demo.gif)                          -->
-<!-- ============================================================ -->
-
-<p align="center">
-  <code>[ 📽️ Demo GIF / Video goes here ]</code>
-</p>
-
----
+![Demo](media/demo.gif)
 
 ## ✨ Features
 
@@ -37,24 +25,10 @@ Stop drowning in folders full of `IMG_20221227_233602.jpg`. Point Meme Classifie
 - 🧪 **Thinking Mode** — Enable reasoning tokens for models that support it (e.g., Qwen3.5) for more accurate results
 - 🌙 **Sleek Dark UI** — A premium, modern interface built with Tailwind CSS 4
 
----
-
 ## 📸 Screenshots
 
-<!-- ============================================================ -->
-<!-- TODO: Add screenshots of the app in action                   -->
-<!-- Example:                                                     -->
-<!-- ![Workspace](./assets/screenshot-workspace.png)              -->
-<!-- ![Settings](./assets/screenshot-settings.png)                -->
-<!-- ============================================================ -->
-
-<p align="center">
-  <code>[ 🖼️ Workspace screenshot goes here ]</code>
-  &nbsp;&nbsp;&nbsp;
-  <code>[ ⚙️ Settings screenshot goes here ]</code>
-</p>
-
----
+![Main with images loaded](media/ss_main_with_images_loaded.png)
+![Settings](media/ss_settings.png)
 
 ## 🚀 Quick Start
 
@@ -69,14 +43,7 @@ Stop drowning in folders full of `IMG_20221227_233602.jpg`. Point Meme Classifie
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/meme_clasifier.git
-cd meme_clasifier
-
-# Install dependencies
 npm install
-
-# Start in development mode
 npm run electron:dev
 ```
 
@@ -86,35 +53,29 @@ npm run electron:dev
 npm run electron:build
 ```
 
----
-
 ## 📖 Usage
 
-1. **Configure your AI provider** — Go to **Settings** (gear icon) and pick a provider. Local users can start with Ollama + `llava:latest` out of the box.
+1. **Configure your AI provider** — Go to **Settings** (gear icon) and pick a provider. Local users can start with Ollama + `qwen3.5:9b` (recommended) out of the box.
 
 2. **Select a folder** — Click **Select Folder** on the workspace and choose a directory containing your memes.
 
 3. **Classify** — Click the **✨ Classify** button on any card. The AI will analyze the image and suggest a descriptive filename.
 
-4. **Review & Apply** — Accept the suggestion with **✅**, edit it with **✏️**, or discard it with **✖️**. Not happy? Hit **🔄 Redo** for a new suggestion.
+4. **Review & Apply** — Accept the suggestion with **✅**, edit it by clicking on the text, or discard it with **✖️**. Not happy? Hit **🔄 Redo** for a new suggestion.
 
 5. **Done!** — Your files are renamed on disk instantly. No undo nightmare — you always review before applying.
-
----
 
 ## 🔌 Supported AI Providers
 
 | Provider | Type | Default Model | API Key Required |
 |---|---|---|---|
-| **Ollama** | 🏠 Local | `llava:latest` | ❌ No |
+| **Ollama** | 🏠 Local | `qwen3.5:9b` | ❌ No |
 | **LM Studio** | 🏠 Local | `vision-model` | ❌ No |
 | **OpenAI** | ☁️ Cloud | `gpt-4o-mini` | ✅ Yes |
 | **Anthropic Claude** | ☁️ Cloud | `claude-3-haiku` | ✅ Yes |
 | **Google Gemini** | ☁️ Cloud | `gemini-2.5-flash` | ✅ Yes |
 
 > **💡 Tip:** Any model you choose **must support vision/image input**. Text-only models won't work.
-
----
 
 ## 🏗️ Tech Stack
 
@@ -127,31 +88,6 @@ npm run electron:build
 | Icons | Lucide React |
 | Persistence | electron-store |
 
----
-
-## 📂 Project Structure
-
-```
-meme_clasifier/
-├── electron/
-│   ├── main.js            # Electron main process
-│   ├── preload.cjs         # Context bridge (IPC)
-│   └── llmService.js       # AI provider integrations
-├── src/
-│   ├── App.jsx             # Root layout & routing
-│   ├── main.jsx            # React entry point
-│   ├── index.css           # Global styles
-│   └── components/
-│       ├── MemeWorkspace.jsx  # Image grid & folder selection
-│       ├── MemeCard.jsx       # Individual image card with AI controls
-│       └── Settings.jsx       # Provider configuration panel
-├── public/
-├── index.html
-├── vite.config.js
-└── package.json
-```
-
----
 
 ## 🤝 Contributing
 
@@ -165,24 +101,16 @@ Contributions are welcome! Here's how to get started:
 
 Please use [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.
 
----
-
 ## 📄 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
 
 ## ☕ Support the Project
 
 If you find Meme Classifier useful, consider buying me a coffee! Your support helps keep this project alive and growing.
 
-<!-- ============================================================ -->
-<!-- TODO: Replace YOUR_USERNAME with your Buy Me a Coffee handle  -->
-<!-- ============================================================ -->
-
 <p align="center">
-  <a href="https://www.buymeacoffee.com/YOUR_USERNAME" target="_blank">
+  <a href="https://buymeacoffee.com/xleed" target="_blank">
     <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" />
   </a>
 </p>
